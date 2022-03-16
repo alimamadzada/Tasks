@@ -6,65 +6,42 @@ namespace Homework
     {
         static void Main(string[] args)
         {
-            #region Task1
-            //Verilmiş ədədin sadə ədəd olub olmamasını print edən console app yazın.
-            //    Console.WriteLine("Ededi daxil edin:");
-            //    int num = int.Parse(Console.ReadLine());
-            //    bool prime = true;
-            //    for (int i = 2; i*i <= num ; i++)
-            //    {
-            //        if (num % i == 0)
-            //            prime = false;
-            //    }
-            //    if (prime)
-            //    {
-            //        Console.WriteLine("Sadedir");
-            //    }
-            //    else
-            //    {
-            //        Console.WriteLine("Murekkebdir");
-            //    }
-            //}
-            #endregion
-
-            #region Task2
-            //Verilmiş ədədin neçə mərtəbəli olduğunu print edən
-            //Console.WriteLine("Ededi daxil edin:");
-            //int num = int.Parse(Console.ReadLine());
-            //if (num < 0)
-            //{
-            //    num *= (-1);
-            //}
-            //int filan = 1;
-            //while (num > 9)
-            //{
-            //    num /= 10;
-            //    filan++;
-            //}
-            //Console.WriteLine(filan + " mertebelidir");
-            #endregion
-
-            #region Task3
-            //Verilmiş ədədin palindrom olub olmadığını print edən console app yazın.
-            //Console.WriteLine("Ededi daxil edin:");
-            //int num = int.Parse(Console.ReadLine());
-            //int example = num;
-            //int ters = 0;
-            //if (num > 9)
-            //{
-            //    while (num > 0)
-            //    {
-            //        ters = ters * 10 + num % 10;
-            //        num /= 10;
-            //    }
-            //    if (ters == example)
-            //    {
-            //        Console.WriteLine("Polindromdur");
-            //    }
-            //    else Console.WriteLine("Polindrom deyil");
-            //}
-            //else Console.WriteLine("Polindromdur");
-            #endregion
+            Console.WriteLine("Çevrenin sahesi= " + CalculateArea(3));
+            Console.WriteLine("Düzbucaqlinin sahesi= " + CalculateArea(2, 4));
+            Console.WriteLine("Düzbucaqli paralelpipedin tam sethinin sahesi= " + CalculateArea(2, 3, 4));
         }
+        /// <summary>
+        /// Prints the area of ​​the circle.
+        /// </summary>
+        /// <param name="r">int,represents the radius of the rectangle</param>
+        /// <returns></returns>
+        static int CalculateArea(int r)
+        {
+            return 3 * (r * r);
+        }
+        /// <summary>
+        /// Prints the area of rectangle.
+        /// </summary>
+        /// <param name="a">int, represents length of the rectangle</param>
+        /// <param name="b">int, represents width of the rectangle</param>
+        /// <returns></returns>
+        static int CalculateArea(int a, int b)
+        {
+            return a * b;
+        }
+        /// <summary>
+        /// Prints the total surface area of ​​a rectangular parallelepiped.
+        /// </summary>
+        /// <param name="a">int, represents the side of the seat</param>
+        /// <param name="b">int, represents the side of the seat</param>
+        /// <param name="c">int, represents the "length" of the parallelepiped</param>
+        /// <returns></returns>
+        static int CalculateArea(int a, int b, int c)
+        {
+            return 2 * (a * b + a * c + b * c);
+        }
+    }
+}
+}
     }
 }
